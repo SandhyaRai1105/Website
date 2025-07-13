@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Wiki Holiday</title>
+  <link rel="stylesheet" href="style.css" />
+  <style> 
+    body{
+    font-family: 'Nunito', sans-serif;
+    color: #333;
+    background: #f4f6f8;
+    text-align: center;
+    }
+    a {
+    color: #00796b;
+    margin-left: auto;
+    }
+    #header {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    }
+    h1{
+        font-weight: 600;
+        font-size: larger;
+    }
+
+    #banner {
+    position: relative;
+    min-height: 100vh;
+    background: url('../banner.jpg') center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    }
+
+    #banner .inner {
+    color: white;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    }
+    #banner .button {
+    margin-top: 1.5rem;
+    }
+
+    .image.fit img {
+    width: 100%;
+    border-radius: 8px;
+    }
+
+    .output-box {
+    margin-top: 5px;
+    font-weight: bold;
+    }
+
+    button {
+    background: #00796b;
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    color: red;
+    border-radius: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    }
+
+    #footer {
+    padding: 2px;
+    text-align: center;
+    background: #b2dfdb;
+    position: relative;
+    }
+    #share{
+        font-size: larger;
+        font-weight: 300;
+    }
+
+  </style>
+</head>
+<body class="landing">
+  <div id="page-wrapper">
+
+    <header id="header">
+      <h1>Wiki Holiday</h1>
+    </header>
+    <section id="banner">
+      <div class="inner">
+        <h2>Wiki Holiday</h2>
+        <p>Explore relaxing, adventurous, and beautiful holiday spots around the world.</p>
+            <section id="share" class="wrapper alt style2">
+                <div class="inner">
+                    <h2>Share Your Favorite Holiday Destination</h2>
+                    <button onclick="favoriteSpot()">Click to Enter Your Favorite Spot</button>
+                    <p id="spot-output" class="output-box"></p>
+                </div>
+            </section>
+    </section>
+
+    <section id="one">
+      <div class="inner">
+        <h2>Top Holiday Spots</h2>
+        <div class="image fit"><img src="holiday.jpg" alt="A relaxing beach destination" /></div>
+        <p>Explore some of the most relaxing, adventurous, and beautiful holiday spots around the world.</p>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <p>Student ID: 24224567 | Name: Sandhya Bantawa Rai</p>
+    </footer>
+
+  </div>
+  <script>
+    window.onload = function () {
+      alert("Welcome to Wiki Holiday!");
+    };
+    function favoriteSpot() {
+      let spot = prompt("What's your favourite holiday destination?");
+      let output = document.getElementById("spot-output");
+      if (spot) {
+        output.innerText = "Your favorite holiday spot is: " + spot;
+        output.style.color = "#00796b";
+      } else {
+        output.innerText = "You didn't enter a holiday destination.";
+        output.style.color = "#b71c1c";
+      }
+    }
+  </script>
+
+</body>
+</html>
